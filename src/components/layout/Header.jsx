@@ -4,7 +4,15 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
     const [isMenuActive, setIsMenuActive] = useState(false);
-    console.log(`와이라노 ${isMenuActive}`);
+
+    const handleMobileMenu = () => {
+        setIsMenuActive((prev) => !prev);
+        if (isMenuActive) {
+            document.querySelector("body").style.overflow = "auto";
+        } else {
+            document.querySelector("body").style.overflow = "hidden";
+        }
+    };
 
     return (
         <header id={styles.header} className={`${isMenuActive && styles.on}`}>
@@ -14,9 +22,7 @@ const Header = () => {
                         <img src="/img/common/logo.png" alt="YJW" />
                     </Link>
                 </h1>
-                <div
-                className={styles.shadow}
-                ></div>
+                <div className={styles.shadow}></div>
                 <nav className={styles.nav}>
                     <h2 className="hide">Main Navigation</h2>
                     <ul className={styles.gnb}>
@@ -79,8 +85,11 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div
-                    className={`${styles.hamburger} ${isMenuActive && styles.active}`}
-                    onClick={() => setIsMenuActive((prev) => !prev)}
+                    className={`${styles.hamburger} ${
+                        isMenuActive && styles.active
+                    }`}
+                    // onClick={() => setIsMenuActive((prev) => !prev)}
+                    onClick={handleMobileMenu}
                 >
                     <span
                         className={`${styles.menu} ${styles.half} ${styles.first}`}
