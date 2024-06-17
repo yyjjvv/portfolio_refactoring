@@ -66,29 +66,12 @@ const Header = () => {
                                 Contact
                             </NavLink>
                         </li>
-                        <li className={styles.mobile}>
-                            <a href="#">
-                                {/* <i class="fa-solid fa-file-arrow-down"></i> */}
-                                Resume
-                            </a>
-                        </li>
-                        <li className={styles.mobile}>
-                            <a href="https://www.linkedin.com/in/jiwonyoo/">
-                                {/* <i class="fa-brands fa-linkedin"></i>LinkedIn */}
-                            </a>
-                        </li>
-                        <li className={styles.mobile}>
-                            <a href="https://github.com/yyjjvv">
-                                {/* <i class="fa-brands fa-github"></i>Git Hub */}
-                            </a>
-                        </li>
                     </ul>
                 </nav>
                 <div
                     className={`${styles.hamburger} ${
                         isMenuActive && styles.active
                     }`}
-                    // onClick={() => setIsMenuActive((prev) => !prev)}
                     onClick={handleMobileMenu}
                 >
                     <span

@@ -1,7 +1,11 @@
 import Intro from "../components/about/Intro";
+import AboutMe from "../components/about/AboutMe";
 const About = () => {
     return (
-        <Intro />
+        <main>
+            <Intro />
+            <AboutMe />
+        </main>
     );
 };
 

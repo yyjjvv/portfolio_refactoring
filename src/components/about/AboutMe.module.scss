@@ -1,0 +1,170 @@
+@import "../../scss/variable";
+@import "../../scss/mixin";
+
+.about {
+    padding-bottom: 50px;
+    @include mq("medium") {
+        padding-bottom: 80px;
+    }
+    @include mq("large") {
+        padding-bottom: 100px;
+    }
+    h3 {
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding: 50px 0;
+        color: #fff;
+        background: $sub1;
+        text-align: center;
+        @include mq("medium") {
+            margin-bottom: 60px;
+            padding: 60px 0;
+        }
+        @include mq("large") {
+            margin-bottom: 100px;
+            padding: 80px 0;
+        }
+    }
+    .intro {
+        text-align: center;
+        margin-bottom: 50px;
+        @include mq("medium") {
+            margin-bottom: 60px;
+        }
+        @include mq("large") {
+            margin-bottom: 100px;
+        }
+        .name {
+            font-size: 18px;
+            font-weight: 100;
+            margin-bottom: 30px;
+            @include mq("medium") {
+                font-size: 20px;
+                margin-bottom: 50px;
+            }
+            @include mq("large") {
+                font-size: 24px;
+                margin-bottom: 60px;
+            }
+        }
+        div {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.7;
+            @include mq("medium") {
+                max-width: 900px;
+            }
+            @include mq("large") {
+                width: 1000px;
+                max-width: none;
+            }
+            .kr {
+                margin-top: 30px;
+                svg {
+                    color: $sub2;
+                }
+            }
+        }
+    }
+    .resumeArea {
+        @include mq("medium") {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .resume {
+        li {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            background: #fff;
+            padding: 50px 10%;
+            margin-bottom: 50px;
+            border-radius: 25px;
+            box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.1);
+            // opacity: 0;
+            // position: relative;
+            // top: 20px;
+            transition: transform 0.4s;
+            @include mq("medium") {
+                width: calc((100% - 40px) / 3);
+                padding: 50px 20px 35px;
+                margin-bottom: 0px;
+                margin: 0;
+            }
+            @include mq("large") {
+                width: calc((100% - 60px) / 3);
+                padding: 50px 40px 35px;
+                border-radius: 40px;
+            }
+            &:hover {
+                transform: translateY(-15px);
+            }
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+            svg {
+                color: $main;
+                font-size: 50px;
+                margin-bottom: 20px;
+                @include mq("medium") {
+                    margin-bottom: 30px;
+                }
+                @include mq("large") {
+                    font-size: 60px;
+                    margin-bottom: 40px;
+                }
+            }
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 30px;
+                position: relative;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                @include mq("medium") {
+                    font-size: 20px;
+                    margin-bottom: 40px;
+                }
+                @include mq("large") {
+                    font-size: 24px;
+    margin-bottom: 50px;
+                }
+            }
+        }
+        .detail {
+            text-align: left;
+            line-height: 1.5;
+            > p {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+                @include mq("medium") {
+                    margin-bottom: 20px;
+                }
+                @include mq("large") {
+                    margin-bottom: 30px;
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            small {
+                display: block;
+                color: #777;
+                font-size: 14px;
+                @include mq("large") {
+                    font-size: 16px;
+                }
+            }
+            .kr {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
