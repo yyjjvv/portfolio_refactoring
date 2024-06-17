@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+
+@import "./scss/variable";
+@import "./scss/mixin";
+@import "./scss/extend";
+@import "./scss/reset";
+@import "./scss/common";
+
+html {
+    font-size: calc(0.875rem + ((1vw - 3.2px) * 0.4545));
+    @include mq("large") {
+        font-size: 18px;
+    }
+}
+
+body {
+    font-family: "Poppins", "NotoSansKR", Arial, Helvetica, sans-serif;
+    color: #141414;
+    line-height: 1;
+    background: $bg;
+}
+
+h3 {
+    @include mq("large") {
+        font-size: 34px;
+    }
+}
+
+.kr {
+    font-family: "NanumBarunGothic", sans-serif;
+    margin-top: 20px;
+    color: #333;
+    word-break: keep-all;
+    letter-spacing: 0.01em;
+}
+
+.container {
+    padding: 0 10px;
+    position: relative;
+    @include mq("medium") {
+        padding: 0 20px;
+    }
+    @include mq("large") {
+        padding: 0 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
