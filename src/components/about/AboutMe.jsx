@@ -6,6 +6,7 @@ import {
     faEarthAsia,
     faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 import styles from "./AboutMe.module.scss";
 
 const AboutMe = () => {
@@ -38,13 +39,22 @@ const AboutMe = () => {
                 </div>
                 <div className={styles.resume}>
                     <ul className={styles.resumeArea}>
-                        <li>
+                        <motion.li
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                ease: "easeInOut",
+                                duration: 0.5,
+                                y: { duration: 0.5 },
+                            }}
+                        >
                             <span>
                                 <FontAwesomeIcon icon={faGraduationCap} />
                             </span>
                             <h4>Education</h4>
                             <div className={styles.detail}>
-                            <p>
+                                <p>
                                     <small>2023.02 ~ 2023.08</small>
                                     <span className="en">
                                         CodeStates Front-end Bootcamp Completion
@@ -74,8 +84,17 @@ const AboutMe = () => {
                                     </span>
                                 </p>
                             </div>
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                ease: "easeInOut",
+                                duration: 1,
+                                y: { duration: 0.5 },
+                            }}
+                        >
                             <p>
                                 <FontAwesomeIcon icon={faEarthAsia} />
                             </p>
@@ -102,20 +121,25 @@ const AboutMe = () => {
                                     </span>
                                 </p>
                             </div>
-                        </li>
-                        <li>
+                        </motion.li>
+                        <motion.li
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                ease: "easeInOut",
+                                duration: 1.5,
+                                y: { duration: 0.5 },
+                            }}
+                        >
                             <p>
                                 <FontAwesomeIcon icon={faBriefcase} />
                             </p>
                             <h4>Work Experience</h4>
                             <div className={styles.detail}>
-                            <p>
-                                    <small>
-                                        2022.06 ~ 2023.02 CNDF
-                                    </small>
-                                    <span className="en">
-                                        Markup Developer
-                                    </span>
+                                <p>
+                                    <small>2022.06 ~ 2023.02 CNDF</small>
+                                    <span className="en">Markup Developer</span>
                                     <span className={styles.kr}>
                                         웹 퍼블리셔
                                     </span>
@@ -132,7 +156,7 @@ const AboutMe = () => {
                                     </span>
                                 </p>
                             </div>
-                        </li>
+                        </motion.li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,108 @@
+@import "../../scss/variable";
+@import "../../scss/mixin";
+
+.portfolio {
+    padding-bottom: 50px;
+    @include mq("medium") {
+        padding-bottom: 80px;
+    }
+    @include mq("large") {
+        padding-bottom: 100px;
+    }
+    h3 {
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding: 50px 0;
+        color: #fff;
+        background: $sub2;
+        text-align: center;
+        @include mq("medium") {
+            margin-bottom: 60px;
+            padding: 60px 0;
+        }
+        @include mq("large") {
+            margin-bottom: 100px;
+            padding: 80px 0;
+        }
+        svg {
+            color: $main;
+        }
+    }
+
+    .goto {
+        @include mq("medium") {
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include mq("large") {
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        li {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 50px;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.1);
+            @include mq("medium") {
+                width: calc((100% - 20px) / 2);
+                max-width: none;
+            }
+            @include mq("large") {
+                width: 550px;
+                margin: 0;
+                padding: 20px;
+            }
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+            a {
+                width: 100%;
+            }
+            .pic {
+                width: 100%;
+                height: 300px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                transition: background 0.4s;
+                @include mq("large") {
+                    height: 400px;
+                }
+            }
+            &.publishing {
+                @include mq("medium") {
+                    margin-bottom: 0px;
+                }
+                .pic {
+                    background-image: url("../../../public/img/about/web.jpg");
+                }
+                &:hover .pic {
+                    background-image: url("../../../public/img/about/web_hover.jpg");
+                }
+            }
+            &.frontend {
+                .pic {
+                    background-image: url("../../../public/img/about/script.jpg");
+                }
+                &:hover .pic {
+                    background-image: url("../../../public/img/about/script_hover.jpg");
+                }
+            }
+            .txt {
+                margin-top: 15px;
+                @include mq("large") {
+                    margin-top: 20px;
+                }
+                span {
+                    font-weight: 100;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

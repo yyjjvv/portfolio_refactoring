@@ -1,0 +1,29 @@
+@import "../../scss/variable";
+@import "../../scss/mixin";
+
+.sideBtn {
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    @include mq("medium") {
+        right: 30px;
+        bottom: 30px;
+    }
+    .btnTop {
+        display: inline-block;
+        color: #555;
+        height: 50px;
+        line-height: 50px;
+    }
+    &:hover .btnTop {
+        color: $main;
+    }
+}

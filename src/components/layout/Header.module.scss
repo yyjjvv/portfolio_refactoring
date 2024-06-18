@@ -7,7 +7,8 @@
     overflow: hidden;
     // position: fixed;
     position: sticky;
-    background: var(--bg);
+    top:0;
+    background: $bg;
     z-index: 100;
     @include mq("medium") {
         width: 100%;
