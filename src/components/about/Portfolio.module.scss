@@ -79,18 +79,18 @@
                     margin-bottom: 0px;
                 }
                 .pic {
-                    background-image: url("../../../public/img/about/web.jpg");
+                    background-image: url("../../../public/img/about/publishing.png");
                 }
                 &:hover .pic {
-                    background-image: url("../../../public/img/about/web_hover.jpg");
+                    background-image: url("../../../public/img/about/publishing_hover.png");
                 }
             }
             &.frontend {
                 .pic {
-                    background-image: url("../../../public/img/about/script.jpg");
+                    background-image: url("../../../public/img/about/frontend.jpg");
                 }
                 &:hover .pic {
-                    background-image: url("../../../public/img/about/script_hover.jpg");
+                    background-image: url("../../../public/img/about/frontend_hover.png");
                 }
             }
             .txt {
@@ -99,7 +99,7 @@
                     margin-top: 20px;
                 }
                 span {
-                    font-weight: 100;
+                    font-weight: 200;
                     margin-right: 20px;
                 }
             }

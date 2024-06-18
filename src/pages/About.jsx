@@ -1,7 +1,7 @@
 import Intro from "../components/about/Intro";
 import AboutMe from "../components/about/AboutMe";
 import Portfolio from "../components/about/Portfolio";
-import Contact from "../components/about/Contact";
+import ContactArea from "../components/about/ContactArea";
 
 const About = () => {
     return (
@@ -9,7 +9,7 @@ const About = () => {
             <Intro />
             <AboutMe />
             <Portfolio />
-            <Contact />
+            <ContactArea />
         </main>
     );
 };

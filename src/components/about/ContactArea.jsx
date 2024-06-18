@@ -7,9 +7,9 @@ import {
     faSquareArrowUpRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import styles from "./Contact.module.scss";
+import styles from "./ContactArea.module.scss";
 
-const Contact = () => {
+const ContactArea = () => {
     return (
         <section className={styles.contact}>
             <div className="container">
@@ -98,4 +98,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default ContactArea;

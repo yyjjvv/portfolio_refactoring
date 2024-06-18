@@ -1,9 +1,12 @@
-import React from 'react'
+import ContactArea from "../components/about/ContactArea";
+import styles from '../components/about/ContactArea.module.scss'
 
 const Contact = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+    return (
+        <div className={styles.contactArea}>
+            <ContactArea />
+        </div>
+    );
+};
 
-export default Contact
+export default Contact;
